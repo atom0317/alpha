@@ -1,0 +1,86 @@
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop
+$ git config --global user.name 'atom0317'
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop
+$ git config --global user.email '903751210@qq.com'
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop
+$ git clone 'https://github.com/atom0317/alpha.git'
+Cloning into 'alpha'...
+warning: You appear to have cloned an empty repository.
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop
+$ cd alpha/
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git add alpha.cpp
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git commit -m 'add alpha.cpp'
+[main (root-commit) 1d85072] add alpha.cpp
+ 1 file changed, 6 insertions(+)
+ create mode 100644 alpha.cpp
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git push
+fatal: unable to access 'https://github.com/atom0317/alpha.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git push
+fatal: 发送请求时出错。
+fatal: 无法连接到远程服务器
+fatal: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 20.205.243.166:443
+fatal: unable to access 'https://github.com/atom0317/alpha.git/': Error in the HTTP2 framing layer
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git push
+fatal: unable to access 'https://github.com/atom0317/alpha.git/': Failed to connect to github.com port 443 after 21066 ms: Timed out
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 255 bytes | 255.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/atom0317/alpha.git
+ * [new branch]      main -> main
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git pull
+Already up to date.
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git pull
+fatal: unable to access 'https://github.com/atom0317/alpha.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 686 bytes | 3.00 KiB/s, done.
+From https://github.com/atom0317/alpha
+   1d85072..785b865  main       -> origin/main
+Updating 1d85072..785b865
+Fast-forward
+ alpha.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git checkout alpha,cpp
+error: pathspec 'alpha,cpp' did not match any file(s) known to git
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$ git checkout alpha.cpp
+Updated 1 path from the index
+
+Attomer@DESKTOP-NB1TJIH MINGW64 /d/我的文档/Desktop/alpha (main)
+$
